@@ -1,0 +1,19 @@
+working precision: 30 decimal digits;  truncation N = 20
+
+--- Fig. 5: L = log 2, even block, archimedean only (target ~0.00133)
+    N= 10   lambda_min = 0.0013847052
+    N= 18   lambda_min = 0.0013454512
+    N= 20   lambda_min = 0.0013423466
+
+--- Sec. 2.3: mu = 3, even block, with primes (target < 6e-8)
+    archimedean only : -0.073735142
+    with p = 2       : 6.6193323e-8
+
+--- Fig. 7: rescue across mu = 2 (even block)
+    mu=2.05   arch only     0.00109821   with primes 0.000894712
+    mu=2.15   arch only      0.0010305   with primes 0.000371836
+    mu=2.25   arch only    0.000338269   with primes 0.000146503
+    mu=2.35   arch only    -0.00204522   with primes 5.42287e-5
+
+--- odd block, L = log 2 (paper: odd sector stays positive past mu = 2)
+    lambda_min = 0.081332088
