@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preregistration — Semilocal Weil Form Positivity under Dirichlet Twist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbfaf7;
+  --ink:#1d2024;
+  --ink-soft:#4e545c;
+  --ink-faint:#7c838c;
+  --rule:#ddd8ce;
+  --rule-strong:#b9b2a5;
+  --mark:#2f4858;
+  --stamp-bg:#f2eee5;
+  --stamp-edge:#8d3b2f;
+  --stamp-ink:#8d3b2f;
+  --measure:36rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15171a;
+    --ink:#e6e3dd;
+    --ink-soft:#b0b5bc;
+    --ink-faint:#868d96;
+    --rule:#2e3237;
+    --rule-strong:#484e55;
+    --mark:#9fc0d2;
+    --stamp-bg:#1e1b19;
+    --stamp-edge:#c4705f;
+    --stamp-ink:#dd9585;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15171a;
+  --ink:#e6e3dd;
+  --ink-soft:#b0b5bc;
+  --ink-faint:#868d96;
+  --rule:#2e3237;
+  --rule-strong:#484e55;
+  --mark:#9fc0d2;
+  --stamp-bg:#1e1b19;
+  --stamp-edge:#c4705f;
+  --stamp-ink:#dd9585;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  font-weight:300;
+  font-size:1.0625rem;
+  line-height:1.62;
+  font-optical-sizing:auto;
+}
+.sheet{max-width:var(--measure);margin:0 auto;padding:3.5rem 1.25rem 6rem}
+@media(min-width:48rem){.sheet{padding:5rem 2rem 8rem}}
+
+header.masthead{margin-bottom:2.75rem}
+h1{
+  font-size:1.9rem;
+  line-height:1.2;
+  font-weight:400;
+  letter-spacing:-0.012em;
+  margin:0 0 .9rem;
+  max-width:22ch;
+}
+@media(min-width:48rem){h1{font-size:2.35rem}}
+.byline{
+  color:var(--ink-faint);
+  font-size:.9rem;
+  margin:0;
+  border-top:1px solid var(--rule);
+  padding-top:.7rem;
+}
+.byline span{display:block}
+
+.stamp{
+  border:1px solid var(--stamp-edge);
+  background:var(--stamp-bg);
+  color:var(--stamp-ink);
+  padding:1.15rem 1.25rem;
+  margin:0 0 2.25rem;
+  font-size:1.02rem;
+  line-height:1.5;
+}
+.stamp p{margin:0}
+.stamp p + p{margin-top:.75rem;color:var(--ink-soft)}
+
+h2{
+  font-size:1.28rem;
+  font-weight:600;
+  line-height:1.3;
+  letter-spacing:-0.008em;
+  margin:3.25rem 0 .2rem;
+  padding-top:1.1rem;
+  border-top:2px solid var(--rule-strong);
+}
+h2 .lv{
+  display:block;
+  font-size:.8rem;
+  font-weight:400;
+  letter-spacing:.04em;
+  color:var(--mark);
+  margin-bottom:.3rem;
+}
+p{margin:0 0 1.05rem}
+strong{font-weight:600}
+em{font-style:italic}
+a{color:var(--mark);text-decoration-thickness:1px;text-underline-offset:.16em}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
+
+ul,ol{margin:0 0 1.05rem;padding-left:1.35rem}
+li{margin-bottom:.5rem}
+li::marker{color:var(--ink-faint)}
+
+.scroll{overflow-x:auto;margin:0 0 1.35rem;border-bottom:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:32rem;font-size:.93rem}
+th,td{
+  text-align:left;
+  vertical-align:top;
+  padding:.62rem .8rem .62rem 0;
+  border-top:1px solid var(--rule);
+}
+th{font-weight:600;color:var(--ink);border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr td:first-child{color:var(--ink);padding-left:0}
+td{color:var(--ink-soft)}
+
+.formula{
+  font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.86rem;
+  line-height:1.7;
+  background:transparent;
+  border-left:2px solid var(--mark);
+  padding:.55rem 0 .55rem 1rem;
+  margin:0 0 1.2rem;
+  overflow-x:auto;
+  white-space:pre;
+  color:var(--ink);
+}
+.note{color:var(--ink-soft)}
+footer{
+  margin-top:4rem;
+  padding-top:1.2rem;
+  border-top:1px solid var(--rule);
+  font-size:.85rem;
+  color:var(--ink-faint);
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+<header class="masthead">
+  <h1>Preregistration — Semilocal Weil Form Positivity under Dirichlet Twist</h1>
+  <p class="byline"><span>As of 18 September 2026</span><span>Solbakken Research Initiative</span></p>
+</header>
+
+<div class="stamp">
+  <p><strong>No numerical result reported in this preregistration is presently reproduced or independently computed. All proposed outcomes are hypotheses or methodological criteria.</strong></p>
+  <p>This document fixes an experimental protocol before any computation is performed, so that the eventual interpretation cannot be reverse-engineered around whatever the numbers show. The results section is deliberately empty and is to be filled only after the corresponding level has been run.</p>
+</div>
+
+<h2>Research question</h2>
+<p>Does the local/archimedean mechanism that produces positivity transitions in the semilocal Weil quadratic form survive a Dirichlet character twist, and if so, how does reversing the sign of the first admissible prime affect the finite-dimensional transition?</p>
+<p>The question is deliberately narrow. It concerns the spectral behaviour of a finite, basis-truncated Hermitian matrix at the points where a new local contribution enters. It is not a question about the origin of Weil positivity, and nothing in this protocol bears on the Riemann Hypothesis beyond the finite system being evaluated.</p>
+<p>The prompting observation is Connes–Consani's report that the archimedean contribution alone ceases to be positive slightly beyond <em>L</em> = log 2, and that positivity is restored on log 2 ≤ <em>L</em> &lt; log 3 once the <em>p</em> = 2 contribution is included, with the smallest eigenvalue sensitive to displacing <em>p</em> from 2 by more than about 10<sup>−3</sup>. The working null hypothesis is that this is generic first-prime rescue rather than a distinguished arithmetic role for 2.</p>
+
+<h2>Primary-source basis</h2>
+<p>Everything in the left column is reported in Connes and Consani, <em>Spectral triples and ζ-cycles</em> (<a href="https://arxiv.org/abs/2106.01715">arXiv:2106.01715</a>, Enseign. Math. 69 (2023) 93–148). Everything in the right column is proposed here and has not been computed by anyone.</p>
+<div class="scroll"><table>
+<thead><tr><th>Established by the paper</th><th>Proposed by this protocol</th></tr></thead>
+<tbody>
+<tr><td>Explicit basis ξ<sub>0</sub> = L<sup>−1/2</sup>, ξ<sub>n</sub> = (−1)<sup>n</sup>(2/L)<sup>1/2</sup>cos(2πnx/L) for n &gt; 0, sine analogue for n &lt; 0; η<sub>n</sub>(u) = ξ<sub>n</sub>(log u)</td><td>High-precision independent reconstruction of the same matrices</td></tr>
+<tr><td>Closed-form convolution table for every index pair, giving σ(n,m)</td><td>Convergence study in truncation N and working precision</td></tr>
+<tr><td>Block split σ = σ<sup>+</sup> ⊕ σ<sup>−</sup>, with σ(n,m) = 0 for n ≥ 0, m &lt; 0</td><td>Measured small-eigenvalue decay envelope as a normalization yardstick</td></tr>
+<tr><td>F̂(i/2) + F̂(−i/2) enter as an explicit rank-one term, not a constraint on the basis</td><td>Twisted E<sub>χ</sub> structural gate</td></tr>
+<tr><td>Sign change and rescue reported at μ = 2, 3, 4 = 2², 5, 7</td><td>Conductor resolution scan</td></tr>
+<tr><td>Sensitivity window for continuous p at L = log 3: negative at p = 1.9999 and at p = 2.0005</td><td>χ<sub>8</sub> / χ<sub>−8</sub> control pair</td></tr>
+<tr><td>Near-radical vectors identified as prolate vectors via E(f)(x) = x<sup>1/2</sup>Σ<sub>n&gt;0</sub> f(nx), count growing like 2μ, one fewer in the odd sector</td><td>3 versus 9 internal control</td></tr>
+</tbody></table></div>
+<p class="note">The reported sensitivity test is performed at <em>L</em> = log 3, the far end of the interval, not at the transition point, and the admissible window is asymmetric.</p>
+
+<h2><span class="lv">Level 0</span>ζ reproduction</h2>
+<p>Level 0 is a result in its own right, not merely a gate. A successful high-precision reconstruction establishes that the published phenomenon can be independently rebuilt from the information the paper supplies. A failure identifies either an implementation defect or an underspecification in the paper, and both are reportable outcomes.</p>
+<p><strong>Precision requirement.</strong> The reported quantities sit far below double precision: the sign change at μ = 7 occurs near 10<sup>−27</sup>, and the smallest eigenvalue at μ = 11 is 2.389 × 10<sup>−48</sup>. IEEE double is reliable only to roughly 10<sup>−16</sup>, so a standard floating-point implementation would return noise and appear to show zeros. Arbitrary-precision arithmetic is mandatory, with working precision set well past the target magnitude.</p>
+<p><strong>Required records.</strong></p>
+<ol>
+<li>Arbitrary-precision library and working precision, stated per run.</li>
+<li>Matrix truncation N, with a convergence study in N.</li>
+<li>A separate convergence study in working precision at fixed N.</li>
+<li>Quadrature method and tolerance for the archimedean matrix elements, which require per-element numerical integration.</li>
+<li>Reproduction targets: the sign changes at μ = 2, 3, 4, 5, 7 in σ<sup>+</sup>, the corresponding odd-sector behaviour, and the smallest-eigenvalue magnitudes at each.</li>
+</ol>
+<p><strong>Reporting rule.</strong> A computed eigenvalue below the established numerical error budget is reported as unresolved, never as zero.</p>
+<p><strong>Principal output for downstream use.</strong> The small-eigenvalue decay envelope as a function of μ. The paper reports log of the smallest eigenvalue decaying roughly linearly in μ; this protocol requires it measured, since every later magnitude comparison is normalized against it.</p>
+
+<h2><span class="lv">Level 1</span>Twisted E<sub>χ</sub> structural gate</h2>
+<p>This is the go/no-go. If the prolate mechanism is specific to the untwisted map, the character calculations measure something structurally different from Level 0 and cannot be interpreted as controls on it.</p>
+<div class="formula">E(f)(x)      = x^(1/2) · Σ_{n&gt;0}        f(nx)
+E_χ(f)(x)    = x^(1/2) · Σ_{n&gt;0}  χ(n) · f(nx)</div>
+<p>Having the right Mellin transform is not sufficient. What must be verified is the full chain: twisted theta transformation, then the pair of cutoff projections, then the angle operator, then the prolate spectrum.</p>
+<p><strong>Points to settle.</strong></p>
+<ul>
+<li><strong>Self-duality.</strong> The untwisted argument runs through Poisson, in the form E(f̂)(x) = E(f)(x<sup>−1</sup>). For real primitive χ we have χ̄ = χ, so the construction stays self-conjugate. A complex character would send E<sub>χ</sub> to E<sub>χ̄</sub> and break this; that is why both test characters are real.</li>
+<li><strong>Which theta identity.</strong> The twisted functional equation runs through θ<sub>χ</sub>, and for odd χ that is the weight-3/2 theta with an extra factor of n in the sum — not the even identity restricted to odd functions. The odd case may need its own derivation. This is the single most likely source of a gate failure.</li>
+<li><strong>Gauss sum.</strong> The Gauss sum enters here and carries the √q dependence. Keep it separate from the conductor term in the density.</li>
+<li><strong>Domain conditions.</strong> In the ζ case E is defined on the codimension-two subspace of even Schwartz functions with f(0) = f̂(0) = 0, and those two conditions kill the pole at s = 1/2. With no pole for non-principal χ, they may be unnecessary or may need replacing. This changes the dimension count of the near-radical, hence the number of small eigenvalues, hence what the decay envelope is being compared against. Settle it before the envelope is used as a yardstick.</li>
+<li><strong>Parity, as a hypothesis to test rather than assume.</strong> Working prediction: for even χ<sub>8</sub> the construction stays within even Schwartz functions and the prolate structure survives essentially unchanged, up to character-specific normalization; for odd χ<sub>−8</sub> it closes on odd functions, where the Fourier transform acts with eigenvalues ±i rather than ±1, so the Slepian–Pollak family and the characteristic-value structure are modified rather than inherited. If this holds, χ<sub>8</sub> is the clean structural control and χ<sub>−8</sub> the structural variation. This prediction is recorded here specifically so that it can be falsified.</li>
+</ul>
+<p><strong>Outcomes.</strong></p>
+<ol>
+<li>Prolate structure survives in equivalent form. The character experiment is a controlled structural variation; proceed.</li>
+<li>A modified but identifiable spectral structure replaces it. Proceed, with every comparison stated against the new structure.</li>
+<li>The prolate mechanism does not survive the twist. Stop. The mod-8 calculation would not be testing the same near-radical phenomenon and could not serve as a control.</li>
+</ol>
+
+<h2><span class="lv">Level 2</span>Conductor resolution scan</h2>
+<p>Run only if Level 1 passes. This scan decides whether the mod-8 experiment has any resolving power, and it is cheap relative to a full character build, so it comes before either matrix.</p>
+<div class="scroll"><table>
+<thead><tr><th>Dependence</th><th>Where it enters</th><th>Value at q = 8</th></tr></thead>
+<tbody>
+<tr><td>(1/2) log q</td><td>Archimedean density of the explicit formula</td><td>≈ 1.0397</td></tr>
+<tr><td>√q</td><td>Gauss sum in the functional equation</td><td>2√2</td></tr>
+</tbody></table></div>
+<p>Collapsing these into a single "conductor normalization" would introduce a spurious q-dependence. The exact coefficient and sign must be taken from the paper's own normalization rather than inserted from a heuristic density comparison.</p>
+<p><strong>The scan.</strong> The +(1/2) log q conductor contribution, in the chosen explicit-formula normalization, is uniformly positive and independent of L. Introduce it as an explicit scalar parameter c and decrease it from the physical value toward the ζ normalization:</p>
+<div class="formula">c :  c₈ ≈ 1.0397  ⟶  0</div>
+<p>The scan is therefore one-sided. Locate c<sub>critical</sub>, the value at which the sign of χ(3) becomes visible in the smallest eigenvalue.</p>
+<p><strong>Concern motivating this level.</strong> The ζ transitions turn on eigenvalues of order 10<sup>−8</sup> at μ = 3. A uniform positive additive constant of order 1 may swamp the χ(3) sign entirely, in which case χ<sub>8</sub> would show no transition at 3 — not because some mechanism rescued the form, but because the +(1/2) log q contribution never let it go negative.</p>
+<p><strong>Interpretation.</strong></p>
+<ul>
+<li>c<sub>critical</sub> ≪ c<sub>8</sub>: the conductor masks the character-sign experiment; mod 8 has poor discriminatory power. Consider a smaller conductor or stop.</li>
+<li>c<sub>critical</sub> comparable to c<sub>8</sub>: the character pair remains informative; proceed.</li>
+<li>The χ(3) effect survives at the physical value: proceed to the full pair.</li>
+</ul>
+
+<h2><span class="lv">Level 3</span>Character experiments</h2>
+<p>Run only after Levels 1 and 2 pass. Both test characters are real and primitive mod 8, so the matrices stay real symmetric and the existing machinery carries over.</p>
+<div class="scroll"><table>
+<thead><tr><th>Character</th><th>χ(−1)</th><th>χ(3)</th><th>χ(9)</th><th>Field</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>χ<sub>8</sub></td><td>+1 (even)</td><td>−1</td><td>+1</td><td>ℚ(√2)</td><td>Structural control, run first</td></tr>
+<tr><td>χ<sub>−8</sub></td><td>−1 (odd)</td><td>+1</td><td>+1</td><td>ℚ(√−2)</td><td>Structural variation, run second</td></tr>
+</tbody></table></div>
+<p>The run order follows the Level 1 prediction and inverts an earlier draft of this protocol: χ<sub>8</sub> is expected to need no reconstruction of the prolate family, χ<sub>−8</sub> to need an odd-parity variant. If Level 1 falsifies that prediction, reverse the order.</p>
+<p><strong>Three simultaneous changes from the ζ case.</strong> These must be factored apart rather than read off final eigenvalue curves.</p>
+<ol>
+<li>The pole term vanishes. For non-principal χ there is no pole, so the F̂(±i/2) terms and the rank-one contribution they produce are absent. The positive baseline shifts structurally, not just numerically.</li>
+<li>p = 2 divides the conductor, so its local term drops out. The admissible sequence becomes 3, 5, 7, 9 = 3², 11, 13, … with each prime power weighted by χ(p<sup>m</sup>) = χ(p)<sup>m</sup>.</li>
+<li>The archimedean factor changes with character parity, and the conductor adds the term isolated in Level 2.</li>
+</ol>
+<p><strong>Parity caution.</strong> Character parity, χ(−1) = ±1, selects the gamma factor. The σ<sup>+</sup>/σ<sup>−</sup> decomposition comes from the symmetry u ↦ u<sup>−1</sup> of the functional. These are different objects. Which block a character's transition lands in must be computed from the matrix symmetry, never inferred from character parity.</p>
+<p><strong>The 3 versus 9 internal control.</strong> The two characters assign opposite signs to the prime 3 but the same sign to 3². If their responses differ at 3 and converge at 9, the effect of the character sign has been isolated directly, rather than merely relocating the first admissible prime. This is the sharpest comparison available in the design.</p>
+<p>The comparison cannot use raw eigenvalue magnitudes. Extrapolating the ζ decay pattern, the signal at μ = 9 is likely past 10<sup>−30</sup> while the difference at μ = 3 sits near 10<sup>−8</sup> — some thirty orders apart. Arbitrary precision handles the arithmetic, but the comparison must be normalized against the decay envelope measured in Level 0. Without that normalization, an expected μ-dependent suppression will look like a structural difference.</p>
+<p><strong>Rescue ledger.</strong> For each character, decompose the form and restore one admissible local contribution at a time:</p>
+<div class="formula">Q_∞,χ  →  +Q_3,χ  →  +Q_5,χ  →  +Q_7,χ  →  +Q_9,χ  →  ⋯</div>
+<p>Record which term removes the negative direction, at what μ, and with what high-precision margin. The output is a causal accounting, not the observation that the complete matrix eventually becomes positive.</p>
+<p><strong>The χ<sub>8</sub> stress case.</strong> Here the first admissible prime enters with the wrong sign. Positivity must still hold, so if p = 3 cannot supply the rescue, something else does: the altered archimedean term, the absent pole term, the conductor term, a later prime, a prime power, or an interaction among them. Identifying which is a finite computation and is the closest thing in this design to a question with an informative answer either way. Do not read a failure of the p = 3 term as a new mechanism before the ledger has ruled out the other candidates.</p>
+
+<h2>Stopping rules</h2>
+<p>These are binding and are recorded before any computation so that a stop cannot later be reinterpreted as a partial result.</p>
+<div class="scroll"><table>
+<thead><tr><th>Level</th><th>Stop condition</th><th>What gets written</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>Reproduction fails after convergence studies in both N and precision</td><td>A reproducibility note: which conventions were underspecified, what was tried, what the discrepancy was. Worth sending to the authors.</td></tr>
+<tr><td>1</td><td>Outcome (3) — prolate structure does not survive the twist</td><td>A short structural note. The character experiment is reclassified, not reinterpreted. Clean stop.</td></tr>
+<tr><td>2</td><td>c<sub>critical</sub> ≪ c<sub>8</sub> for all 0 ≤ c ≤ c<sub>8</sub></td><td>The mod-8 test has no resolution. Report the threshold and stop, or restart with a smaller conductor.</td></tr>
+<tr><td>3</td><td>Eigenvalue margins at μ = 9 fall below the error budget</td><td>The 3 versus 9 comparison is unresolved. Report the 3 result alone; do not interpret 9.</td></tr>
+</tbody></table></div>
+<p>A further rule applies throughout: if the results at any level are consistent with the null hypothesis, that is the finding. The generic-rescue null is already substantially supported by the paper's own sequence of transitions at 2, 3, 4, 5 and 7, and confirming it is a legitimate end state for this project rather than a failure to find something.</p>
+
+<h2>Epistemic boundary</h2>
+<p>Positivity of the complete Weil quadratic form is equivalent to RH under the hypotheses of the relevant criterion. Positivity of a finite, basis-truncated matrix establishes positivity only on that finite subspace. A sequence of such computations can provide evidence toward the full criterion only if the truncation family is shown to converge appropriately to the full test-function space.</p>
+<p>What a completed run would establish:</p>
+<ul>
+<li>Whether the published ζ numerics can be independently reconstructed from the paper's stated formulae.</li>
+<li>Whether the local/archimedean rescue mechanism survives a character twist.</li>
+<li>Which local contribution removes the negative direction in each case, with quantified margins.</li>
+</ul>
+<p>What it would not establish, under any outcome:</p>
+<ul>
+<li>Any independent origin for Weil positivity. The Weil form is the explicit formula evaluated on f ⋆ f*; computing with it is not deriving it from something else.</li>
+<li>Any implication for RH or GRH beyond the finite system evaluated.</li>
+<li>Anything about the existence of the missing geometric structure — the arithmetic surface, the Frobenius analogue, the primitive-correspondence decomposition, or a Riemann–Roch analogue — whose absence is the actual obstruction to transplanting Weil's proof to ℚ.</li>
+</ul>
+<p>One observation from the source is worth recording without overclaiming: the spectral triple construction in the paper uses only the prolate vectors, with no reference to the Weil form. That is closer to an independent input than most candidates in this area. It is a spectral realization, not a source of positivity, and this protocol does not test it.</p>
+
+<h2>Results</h2>
+<p>Empty by design. Fill only after the corresponding level has been run, and record the date and software version alongside each entry.</p>
+<div class="scroll"><table>
+<thead><tr><th>Level</th><th>Status</th><th>Date run</th><th>Source / formula version</th><th>Precision / N</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>0 — ζ reproduction</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>0 — decay envelope</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1 — twisted E<sub>χ</sub> gate</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2 — conductor scan</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3 — χ<sub>8</sub></td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3 — χ<sub>−8</sub></td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3 — 3 versus 9</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+
+<h2>Appendix — provenance</h2>
+<p>This protocol was not derived from theory. It emerged from an iterative exchange between two AI systems and a human reader, in which several confident claims were made and then corrected. The route matters for how the eventual results should be read, so it is recorded rather than smoothed over.</p>
+<div class="scroll"><table>
+<thead><tr><th>Component</th><th>Origin</th></tr></thead>
+<tbody>
+<tr><td>ζ numerical phenomena, parity structure, prolate near-radical, p = 2 sensitivity window</td><td>Published — Connes–Consani, arXiv:2106.01715</td></tr>
+<tr><td>Twisted E<sub>χ</sub> construction and the character-specific design</td><td>Derived here from the primary source</td></tr>
+<tr><td>Prediction that even χ<sub>8</sub> retains the prolate structure and odd χ<sub>−8</sub> requires a variant</td><td>Hypothesis, unverified</td></tr>
+<tr><td>Conductor-masking concern and the one-sided scan</td><td>Hypothesis, unverified</td></tr>
+<tr><td>3 versus 9 internal control</td><td>Derived here</td></tr>
+<tr><td>Normalized prime sensitivity and the rescue ledger</td><td>Proposed computations, not run</td></tr>
+</tbody></table></div>
+<p><strong>Corrections that shaped the design.</strong> In rough order: an early framing conflated the prolate limit with the sine-kernel scaling limit; a proposed "independent positivity" criterion was too narrow, since Stepanov–Bombieri prove function-field RH with no positivity theorem at all; a proposed prime-scrambling control was invalid because W<sub>p</sub>'s support condition ties it to p; the reported 10<sup>−3</sup> sensitivity was treated as a target before its conditions were checked against the paper; several levels of an earlier protocol turned out to be already answered in the source; and the character run order was inverted late, after the parity structure of the twisted map was considered.</p>
+<p><strong>A note on convergence.</strong> Agreement between systems after iterative correction is not independent confirmation. The one element of this document with evidential standing independent of that exchange is the published numerical observation, which can be reproduced or fail to reproduce on its own terms. That is what Level 0 is for.</p>
+
+<footer>Preregistration, not a report. Results section to be completed only after the corresponding level has been run.</footer>
+
+</main>
+</body>
+</html>
