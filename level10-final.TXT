@@ -1,0 +1,8 @@
+--- mu = 7 envelope point
+    mu=7 N=18 dps=60  with primes 4.1255062e-26  [20s]
+    mu=7 N=22 dps=60  with primes 4.1596283e-27  [52s]
+    mu=7 N=26 dps=80  with primes 1.6754942e-27  [121s]
+--- mu = 3, N = 50 at reduced precision (justified by dps-independence)
+    N=50 dps=25  lambda_min = 5.666577381e-8  [229s]
+done 229s
+    mu=7 N=26 dps=80  arch only  -0.55658995
