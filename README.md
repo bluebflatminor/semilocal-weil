@@ -26,7 +26,7 @@ should be read before the code.
 
 ## Status
 
-Level 0 (reproduction of the ζ case) is **complete for the even sector**: all four reported
+Level 0 (reproduction of the ζ case) is **complete for the even sector**: the Figure 5 value and all five reported μ
 transitions reproduce, the result is monotone in truncation, and at μ = 3 it is
 precision-independent to ten significant figures. See `results/NOTES.md`.
 
@@ -81,4 +81,4 @@ else was built on top of it.
 
 ## License
 
-Not yet chosen. Add one before making the repository public.
+CC0 1.0 Universal — dedicated to the public domain. See `LICENSE`.
