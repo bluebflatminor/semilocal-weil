@@ -1,0 +1,8 @@
+--- B. precision convergence at mu = 3, N = 26
+    dps= 20  lambda_min = 6.145334501e-8   [16s]
+    dps= 30  lambda_min = 6.145334501e-8   [40s]
+    dps= 50  lambda_min = 6.145334501e-8   [79s]
+
+--- C. decay envelope, N = 26
+    mu=4 dps= 50  arch only -0.239508        with primes 9.9719441e-13  [160s]
+    mu=5 dps= 60  arch only -0.372381        with primes 1.3228307e-17  [258s]
