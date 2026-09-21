@@ -19,15 +19,25 @@ should be read before the code.
 | `docs/index.html` | The preregistration. Canonical document; renders via GitHub Pages. |
 | `src/weilform.py` | The semilocal Weil form: basis, convolutions, local terms, matrix assembly. |
 | `src/reproduce.py` | Level 0 reproduction checks against the paper's reported values. |
-| `results/level0-run.txt` | Output of one run, with its settings. |
-| `results/NOTES.md` | What reproduced, what the discrepancies were, what remains. |
+| `src/gate.py` | Level 1: twisted Poisson identities and the conductor-scaled involution. |
+| `results/level0-*.txt`, `results/level1-gate.txt` | Raw run logs with their settings. |
+| `results/NOTES.md` | Level 0: what reproduced, what the discrepancies were, what remains. |
+| `results/LEVEL1.md` | Level 1: the gate verdict and the conductor-scaled involution. |
 
 ## Status
 
-Level 0 (reproduction of the ζ case) is **partially complete**. Levels 1–3 — the twisted
-`E_χ` structural gate, the conductor resolution scan, and the χ₈ / χ₋₈ character pair —
-are **not started**. Their design is frozen in the preregistration, including the
-stopping rules that let the project end without a result.
+Level 0 (reproduction of the ζ case) is **complete for the even sector**: all four reported
+transitions reproduce, the result is monotone in truncation, and at μ = 3 it is
+precision-independent to ten significant figures. See `results/NOTES.md`.
+
+Level 1 (the twisted `E_χ` structural gate) **passes**. The twisted self-duality holds, but
+the involution is `x ↦ 1/(qx)` rather than `x ↦ 1/x` — the construction is the untwisted one
+conjugated by scaling by √q, so the interval must be centred at `q^(−1/2)`, not at 1. See
+`results/LEVEL1.md`.
+
+Levels 2 and 3 — the conductor resolution scan and the χ₈ / χ₋₈ character pair — are **not
+started**. Their design is frozen in the preregistration, including the stopping rules that
+let the project end without a result.
 
 ## Running it
 
