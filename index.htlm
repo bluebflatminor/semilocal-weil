@@ -159,12 +159,12 @@ footer{
 
 <header class="masthead">
   <h1>Preregistration — Semilocal Weil Form Positivity under Dirichlet Twist</h1>
-  <p class="byline"><span>As of 18 September 2026</span><span>Solbakken Research Initiative</span></p>
+  <p class="byline"><span>As of 18 September 2026 · Level 0 run</span><span>Solbakken Research Initiative</span></p>
 </header>
 
 <div class="stamp">
-  <p><strong>No numerical result reported in this preregistration is presently reproduced or independently computed. All proposed outcomes are hypotheses or methodological criteria.</strong></p>
-  <p>This document fixes an experimental protocol before any computation is performed, so that the eventual interpretation cannot be reverse-engineered around whatever the numbers show. The results section is deliberately empty and is to be filled only after the corresponding level has been run.</p>
+  <p><strong>The protocol below was fixed in full before any computation was performed. Levels 0 and 1 have since been run and their results are recorded; Levels 2 and 3 have not been run, and every outcome stated for them remains a hypothesis or a methodological criterion.</strong></p>
+  <p>Nothing in the protocol, the stopping rules, or the epistemic boundary has been altered since results began to exist. Changes after 18 September 2026 are confined to the results table and are dated there. The point of fixing the design in advance is that the interpretation cannot be reverse-engineered around whatever the numbers show &mdash; which only holds if the design is not edited once they do.</p>
 </div>
 
 <h2>Research question</h2>
@@ -293,18 +293,19 @@ E_χ(f)(x)    = x^(1/2) · Σ_{n&gt;0}  χ(n) · f(nx)</div>
 <p>One observation from the source is worth recording without overclaiming: the spectral triple construction in the paper uses only the prolate vectors, with no reference to the Weil form. That is closer to an independent input than most candidates in this area. It is a spectral realization, not a source of positivity, and this protocol does not test it.</p>
 
 <h2>Results</h2>
-<p>Empty by design. Fill only after the corresponding level has been run, and record the date and software version alongside each entry.</p>
+<p>Level 0 run 18 September 2026; Level 1 run 19 September 2026. Levels 2–3 not started. Rows are filled only after the corresponding level has been run.</p>
 <div class="scroll"><table>
 <thead><tr><th>Level</th><th>Status</th><th>Date run</th><th>Source / formula version</th><th>Precision / N</th><th>Outcome</th></tr></thead>
 <tbody>
-<tr><td>0 — ζ reproduction</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
-<tr><td>0 — decay envelope</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
-<tr><td>1 — twisted E<sub>χ</sub> gate</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>0 — ζ reproduction</td><td>Complete (even sector)</td><td>2026-09-18</td><td>eq. (2.25) form of the archimedean integrand — see note</td><td>dps 25–80, N = 20–50</td><td>All four reported transitions reproduce: 0.0013339 at L = log 2; 5.6666×10⁻⁸ at μ = 3 (paper: &lt; 6×10⁻⁸); 9.97×10⁻¹³ at μ = 4; 1.32×10⁻¹⁷ at μ = 5; 1.68×10⁻²⁷ at μ = 7. Monotone decreasing in N throughout. Precision-independent to 10 s.f. at μ = 3.</td></tr>
+<tr><td>0 — decay envelope</td><td>Complete</td><td>2026-09-18</td><td>as above</td><td>N = 26–50</td><td>Log-linear in μ at roughly 4.5 orders per unit. Extrapolation puts μ = 9 near 10⁻³⁶, resolvable at 80–100 digits, so the Level 3 stopping condition on unresolved margins at μ = 9 is unlikely to fire.</td></tr>
+<tr><td>1 — twisted E<sub>χ</sub> gate</td><td><strong>Passes</strong></td><td>2026-09-19</td><td>twisted Poisson, real primitive χ mod 8; Gaussian test functions</td><td>dps 40, 400–600 terms</td><td>Self-duality holds, but the involution is x ↦ 1/(qx), not x ↦ 1/x: the construction is the untwisted one conjugated by scaling by √q, fixed point q<sup>−1/2</sup>. Verified to 10⁻⁴² at three values of x for both characters; the untwisted involution fails as a control. χ<sub>8</sub> = outcome (1); χ<sub>−8</sub> = outcome (2), requiring the odd-parity prolate family via the weight-3/2 theta. The recorded parity prediction was not falsified: each character satisfies the identity matching its parity and fails the other.</td></tr>
 <tr><td>2 — conductor scan</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>3 — χ<sub>8</sub></td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>3 — χ<sub>−8</sub></td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>3 — 3 versus 9</td><td>Not started</td><td></td><td></td><td></td><td></td></tr>
 </tbody></table></div>
+<p class="note">The source / formula version field did the work it was added for. A first implementation took the archimedean integrand as exp(t/2)(θ(t) − θ(0))/(exp(t) − exp(−t)) from an automated text extraction of eq. (2.32), and returned 0.370 against an expected 0.00133. Eq. (2.25) places the x<sup>1/2</sup> inside the difference; that form is self-consistent, reproducing both the tail integral over [L, ∞) and the 2.00963 head coefficient of Figure 4. The fault was in our extraction, not in the paper — and it was silent: the matrix assembled, the eigenvalues converged smoothly in N, and the magnitude was plausible. Only comparison against a published value caught it. A second error of the same family occurred while transcribing results into this table: a value was entered into the archimedean-only column at μ = 7 that had not been computed. It was caught on review and replaced with the computed figure. Both faults are recorded here rather than in the appendix, because the appendix concerns how the protocol was designed and these concern how its results were handled.</p>
 
 <h2>Appendix — provenance</h2>
 <p>This protocol was not derived from theory. It emerged from an iterative exchange between two AI systems and a human reader, in which several confident claims were made and then corrected. The route matters for how the eventual results should be read, so it is recorded rather than smoothed over.</p>
@@ -321,7 +322,7 @@ E_χ(f)(x)    = x^(1/2) · Σ_{n&gt;0}  χ(n) · f(nx)</div>
 <p><strong>Corrections that shaped the design.</strong> In rough order: an early framing conflated the prolate limit with the sine-kernel scaling limit; a proposed "independent positivity" criterion was too narrow, since Stepanov–Bombieri prove function-field RH with no positivity theorem at all; a proposed prime-scrambling control was invalid because W<sub>p</sub>'s support condition ties it to p; the reported 10<sup>−3</sup> sensitivity was treated as a target before its conditions were checked against the paper; several levels of an earlier protocol turned out to be already answered in the source; and the character run order was inverted late, after the parity structure of the twisted map was considered.</p>
 <p><strong>A note on convergence.</strong> Agreement between systems after iterative correction is not independent confirmation. The one element of this document with evidential standing independent of that exchange is the published numerical observation, which can be reproduced or fail to reproduce on its own terms. That is what Level 0 is for.</p>
 
-<footer>Preregistration, not a report. Results section to be completed only after the corresponding level has been run.</footer>
+<footer>Preregistration with Level 0 and Level 1 results. Design frozen 18 September 2026; later edits confined to the results table.</footer>
 
 </main>
 </body>
