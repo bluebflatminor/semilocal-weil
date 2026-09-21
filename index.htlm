@@ -164,7 +164,7 @@ footer{
 
 <div class="stamp">
   <p><strong>The protocol below was fixed in full before any computation was performed. Levels 0 and 1 have since been run and their results are recorded; Levels 2 and 3 have not been run, and every outcome stated for them remains a hypothesis or a methodological criterion.</strong></p>
-  <p>Nothing in the protocol, the stopping rules, or the epistemic boundary has been altered since results began to exist. Changes after 18 September 2026 are confined to the results table and are dated there. The point of fixing the design in advance is that the interpretation cannot be reverse-engineered around whatever the numbers show &mdash; which only holds if the design is not edited once they do.</p>
+  <p>Nothing in the protocol, the stopping rules, or the epistemic boundary has been altered since results began to exist. Changes after 18 September 2026 are confined to the results table (dated there), this status notice, and the license line below. The point of fixing the design in advance is that the interpretation cannot be reverse-engineered around whatever the numbers show &mdash; which only holds if the design is not edited once they do.</p>
 </div>
 
 <h2>Research question</h2>
@@ -322,7 +322,7 @@ E_χ(f)(x)    = x^(1/2) · Σ_{n&gt;0}  χ(n) · f(nx)</div>
 <p><strong>Corrections that shaped the design.</strong> In rough order: an early framing conflated the prolate limit with the sine-kernel scaling limit; a proposed "independent positivity" criterion was too narrow, since Stepanov–Bombieri prove function-field RH with no positivity theorem at all; a proposed prime-scrambling control was invalid because W<sub>p</sub>'s support condition ties it to p; the reported 10<sup>−3</sup> sensitivity was treated as a target before its conditions were checked against the paper; several levels of an earlier protocol turned out to be already answered in the source; and the character run order was inverted late, after the parity structure of the twisted map was considered.</p>
 <p><strong>A note on convergence.</strong> Agreement between systems after iterative correction is not independent confirmation. The one element of this document with evidential standing independent of that exchange is the published numerical observation, which can be reproduced or fail to reproduce on its own terms. That is what Level 0 is for.</p>
 
-<footer>Preregistration with Level 0 and Level 1 results. Design frozen 18 September 2026; later edits confined to the results table.</footer>
+<footer>Preregistration with Level 0 and Level 1 results. Design frozen 18 September 2026: protocol, stopping rules and epistemic boundary unchanged since.<br>Released under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>. Code and logs: <a href="https://github.com/bluebflatminor/semilocal-weil">github.com/bluebflatminor/semilocal-weil</a>.</footer>
 
 </main>
 </body>
