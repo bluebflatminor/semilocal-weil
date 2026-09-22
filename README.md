@@ -12,6 +12,8 @@ Hypothesis.** It computes eigenvalues of finite, basis-truncated matrices and re
 what they do. The epistemic boundary is stated explicitly in the preregistration and
 should be read before the code.
 
+**Read the preregistration:** [bluebflatminor.github.io/semilocal-weil](https://bluebflatminor.github.io/semilocal-weil/)
+
 ## What is here
 
 | Path | Contents |
