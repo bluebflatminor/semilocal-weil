@@ -1,4 +1,4 @@
-# Semilocal Weil form — preregistration and Level 0 reproduction
+# Semilocal Weil form — a preregistered computation
 
 A preregistered computational investigation of positivity transitions in the semilocal
 Weil quadratic form, and an independent high-precision reconstruction of the numerical
@@ -32,7 +32,7 @@ precision-independent to ten significant figures. See `results/NOTES.md`.
 
 Level 1 (the twisted `E_χ` structural gate) **passes**. The twisted self-duality holds, but
 the involution is `x ↦ 1/(qx)` rather than `x ↦ 1/x` — the construction is the untwisted one
-conjugated by scaling by √q, so the interval must be centred at `q^(−1/2)`, not at 1. See
+conjugated by scaling by √q, so the interval must be centered at `q^(−1/2)`, not at 1. See
 `results/LEVEL1.md`.
 
 Levels 2 and 3 — the conductor resolution scan and the χ₈ / χ₋₈ character pair — are **not
