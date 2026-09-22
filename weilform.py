@@ -52,7 +52,7 @@ def W_02(n, m, L):
 
 
 def W_R(n, m, L):
-    """Archimedean distribution, eq. 2.32."""
+    """Archimedean distribution: eq. (2.32) in the (2.25) form — see NOTES.md."""
     t0 = theta_sym(n, m, 0, L)
     head = (t0 / 2) * (euler + log(4 * pi * (exp(L) - 1) / (exp(L) + 1)))
     f = lambda t: (exp(t / 2) * theta_sym(n, m, t, L) - t0) / (exp(t) - exp(-t))
