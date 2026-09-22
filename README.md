@@ -86,4 +86,3 @@ else was built on top of it.
 ## License
 
 CC0 1.0 Universal — dedicated to the public domain. See `LICENSE`.
-
