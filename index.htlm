@@ -159,7 +159,7 @@ footer{
 
 <header class="masthead">
   <h1>Preregistration — Semilocal Weil Form Positivity under Dirichlet Twist</h1>
-  <p class="byline"><span>As of 18 September 2026 · Level 0 run</span><span>Solbakken Research Initiative</span></p>
+  <p class="byline"><span>Design frozen 18 September 2026</span><span>Solbakken Research Initiative</span></p>
 </header>
 
 <div class="stamp">
@@ -169,7 +169,7 @@ footer{
 
 <h2>Research question</h2>
 <p>Does the local/archimedean mechanism that produces positivity transitions in the semilocal Weil quadratic form survive a Dirichlet character twist, and if so, how does reversing the sign of the first admissible prime affect the finite-dimensional transition?</p>
-<p>The question is deliberately narrow. It concerns the spectral behaviour of a finite, basis-truncated Hermitian matrix at the points where a new local contribution enters. It is not a question about the origin of Weil positivity, and nothing in this protocol bears on the Riemann Hypothesis beyond the finite system being evaluated.</p>
+<p>The question is deliberately narrow. It concerns the spectral behavior of a finite, basis-truncated Hermitian matrix at the points where a new local contribution enters. It is not a question about the origin of Weil positivity, and nothing in this protocol bears on the Riemann Hypothesis beyond the finite system being evaluated.</p>
 <p>The prompting observation is Connes–Consani's report that the archimedean contribution alone ceases to be positive slightly beyond <em>L</em> = log 2, and that positivity is restored on log 2 ≤ <em>L</em> &lt; log 3 once the <em>p</em> = 2 contribution is included, with the smallest eigenvalue sensitive to displacing <em>p</em> from 2 by more than about 10<sup>−3</sup>. The working null hypothesis is that this is generic first-prime rescue rather than a distinguished arithmetic role for 2.</p>
 
 <h2>Primary-source basis</h2>
@@ -196,7 +196,7 @@ footer{
 <li>Matrix truncation N, with a convergence study in N.</li>
 <li>A separate convergence study in working precision at fixed N.</li>
 <li>Quadrature method and tolerance for the archimedean matrix elements, which require per-element numerical integration.</li>
-<li>Reproduction targets: the sign changes at μ = 2, 3, 4, 5, 7 in σ<sup>+</sup>, the corresponding odd-sector behaviour, and the smallest-eigenvalue magnitudes at each.</li>
+<li>Reproduction targets: the sign changes at μ = 2, 3, 4, 5, 7 in σ<sup>+</sup>, the corresponding odd-sector behavior, and the smallest-eigenvalue magnitudes at each.</li>
 </ol>
 <p><strong>Reporting rule.</strong> A computed eigenvalue below the established numerical error budget is reported as unresolved, never as zero.</p>
 <p><strong>Principal output for downstream use.</strong> The small-eigenvalue decay envelope as a function of μ. The paper reports log of the smallest eigenvalue decaying roughly linearly in μ; this protocol requires it measured, since every later magnitude comparison is normalized against it.</p>
